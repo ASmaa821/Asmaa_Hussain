@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmaa Hussein - Data Analytics Dashboard ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="pp.jpg" alt="Asmaa Hussein" />
+                </div>
+                <div class="profile-info">
+                    <h1>ASMAA HUSSEIN</h1>
+                    <p class="tagline">Data Analyst passionate about turning data into <span class="highlight">actionable insights</span> and <span class="highlight">clear stories</span></p>
+                    <div class="contact-info">
+                        <span class="contact-item">📧 asmaahussain172001@gmail.com</span>
+                        <span class="contact-item">📱 +971 565610725</span>
+						<span class="contact-item">
+  GitHub link: 
+  <a href="https://github.com/ASmaa821/My_portfolio" target="_blank">
+    https://github.com/ASmaa821/My_portfolio
+  </a>
+</span>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-btn" onclick="toggleMenu()"> MENU</button>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav class="side-menu" id="sideMenu">
+            <div class="menu-header">
+                <h3>Navigation</h3>
+                <button class="close-menu" onclick="toggleMenu()">×</button>
+            </div>
+            <ul>
+                <li><a href="#overview" onclick="showSection('overview')">Overview</a></li>
+                <li><a href="#analytics" onclick="showSection('analytics')">Analytics</a></li>
+                <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+                <li><a href="#cv" onclick="showSection('cv')">CV/Resume</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="content-section active">
+                <h2>Analytics Overview</h2>
+                
+                <!-- Introduction Section -->
+                <div class="introduction-card">
+                    <h3>✨ About Asmaa Hussein</h3>
+                    <div class="intro-content">
+                        <p>Welcome to my data analytics dashboard! I'm <strong>Asmaa Hussein</strong>, a passionate Data Analyst with expertise in transforming complex datasets into meaningful business insights. With a strong foundation in <span class="highlight">SQL, Power BI, Python, and Excel</span>, I specialize in creating data-driven solutions that drive strategic decision-making.</p>
+                        
+                        <div class="intro-highlights">
+                            <div class="intro-item">
+                                <span class="intro-icon">🎓</span>
+                                <div>
+                                    <h4>Education</h4>
+                                    <p>Graduate of Ahram Canadian University in Computer Engineering with specialized training in data analytics and business intelligence</p>
+                                </div>
+                            </div>
+                            <div class="intro-item">
+                                <span class="intro-icon">🏆</span>
+                                <div>
+                                    <h4>Certificates</h4>
+                                    <p>IBM Data Analysis professional Certificate <br>
+									   Data Analysis With Python<br> 
+									   Databse and SQL for Data Analysis
+									   </p>
+                                </div>
+                            </div>
+                            <div class="intro-item">
+                                <span class="intro-icon">💼</span>
+                                <div>
+                                    <h4>Internships</h4>
+                                    <p><strong> MCIT / Microsoft (Aug 2024) </strong>  Completed the Power Bl course provided by Microsoft, gaining a solid understanding of data visualization, data modeling, and report creation. Acquired hands-on experience in transforming raw data into actionable insights and interactive dashboards, enhancing my ability to analyze and present data effectively.
+
+
+									<br><strong>CodeAlpha Apr (2025 - May 2025)</strong> - Data Analytics Intern (Remote). Led development of dynamic Power BI dashboards for call center analytics, integrated multiple datasets including AHT and CSAT metrics, and applied advanced DAX formulas to derive critical KPIs for performance monitoring and stakeholder decision-making. </p>
+                                </div>
+                            </div>
+                            <div class="intro-item">
+                                <span class="intro-icon">🚀</span>
+                                <div>
+                                    <h4>Mission</h4>
+                                    <p>To empower businesses with actionable insights through innovative data solutions and visual storytelling</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="intro-quote">"I believe that data tells a story, and my role is to translate that story into strategies that create real impact. Whether it's optimizing customer experiences or identifying growth opportunities, I thrive on solving complex problems with data-driven approaches."</p>
+                    </div>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card" onclick="animateCard(this)">
+                        <div class="stat-icon">🌸</div>
+                        <div class="stat-value" data-target="37">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                        <div class="stat-change positive">✨ +15% this month</div>
+                    </div>
+                    <div class="stat-card" onclick="animateCard(this)">
+                        <div class="stat-icon">🌟</div>
+                        <div class="stat-value" data-target="1.2">0</div>
+                        <div class="stat-label">Million Records Analyzed</div>
+                        <div class="stat-change positive">💖 +32% growth</div>
+                    </div>
+                    <div class="stat-card" onclick="animateCard(this)">
+                        <div class="stat-icon">🌈</div>
+                        <div class="stat-value" data-target="95">0</div>
+                        <div class="stat-label">Efficiency Score %</div>
+                        <div class="stat-change positive">🌺 +5% improvement</div>
+                    </div>
+                    <div class="stat-card" onclick="animateCard(this)">
+                        <div class="stat-icon">💎</div>
+                        <div class="stat-value" data-target="98">0</div>
+                        <div class="stat-label">Accuracy Rate %</div>
+                        <div class="stat-change neutral">🎀 Maintained</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section id="analytics" class="content-section">
+                <h2>E-Commerce Analytics Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="chart-container">
+                        <h3>Sales Trends</h3>
+                        <div class="filter-controls">
+                            <select id="categoryFilter" onchange="updateCharts()">
+                                <option value="all">All</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="fashion">Fashion</option>
+                            </select>
+                            <select id="periodFilter" onchange="updateCharts()">
+                                <option value="month">Month</option>
+                                <option value="quarter">Quarter</option>
+                                <option value="year">Year</option>
+                            </select>
+                        </div>
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Customer Segmentation</h3>
+                        <canvas id="segmentChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Regional Performance</h3>
+                        <canvas id="regionChart"></canvas>
+                    </div>
+                    <div class="insights-panel">
+                        <h3>Key Insights</h3>
+                        <div class="insight-item">
+                            <span class="insight-icon">🌸</span>
+                            <p>Peak sales: 2-4 PM weekdays</p>
+                        </div>
+                        <div class="insight-item">
+                            <span class="insight-icon">🌼</span>
+                            <p>Mobile traffic: +45% this quarter</p>
+                        </div>
+                        <div class="insight-item">
+                            <span class="insight-icon">💖</span>
+                            <p>Premium users: 3x retention</p>
+                        </div>
+                        <div class="insight-item">
+                            <span class="insight-icon">✨</span>
+                            <p>Revenue growth: +22% YoY</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="content-section projects-section">
+                <button class="back-to-projects" onclick="backToProjects()">
+                    ←
+                </button>
+                <h2>Data Analytics Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" onclick="expandProject(this)">
+                        <div class="project-header">
+                            <h3>COVID-19 Dashboard Summary (GCC Countries: Jan – Jun 2020)</h3>
+                            <span class="project-status active">Active</span>
+                        </div>
+                        <p>An interactive dashboard analyzing COVID-19 trends in GCC countries from January to June 2020.
+						It highlights recovery and death patterns, with country-wise comparisons and monthly progression insights.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Custom visuals</span>
+                            <span class="tech-tag">DAX</span>
+							<span class="tech-tag">Covid-19</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">30M</span>
+                                <span class="metric-label">Total Confirmed Case</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">21M</span>
+                                <span class="metric-label">Total Recovered Cases</span>
+                            </div>
+							<div class="metric">
+                                <span class="metric-value">195K</span>
+                                <span class="metric-label">Total Deaths</span>
+                            </div>
+                        </div>
+						
+						<div class="project-video-container">
+							<div class="video-overlay">🎬 Demo</div>
+							<video class="project-video" controls autoplay muted loop poster="thumbnail.jpg">
+								<source src="covid.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-description">
+								<h4>COVID-19 Dashboard Demo</h4>
+								<p>Interactive Power BI dashboard showcasing recovery trends and country comparisons</p>
+							</div>
+						</div>
+						
+						<!-- COVID-19 Project Dashboard (hidden by default) -->
+						<div class="project-dashboard" id="covid-dashboard" style="display: none;">
+							<div class="dashboard-header">
+								<h3>📊 COVID-19 Interactive Dashboard</h3>
+								<p>Comprehensive analysis of COVID-19 trends across GCC countries (Jan-Jun 2020)</p>
+							</div>
+							
+							<div class="project-charts-grid">
+								<div class="project-chart-container">
+									<h4>Cases by Country</h4>
+									<canvas id="covidCountryChart"></canvas>
+								</div>
+								<div class="project-chart-container">
+									<h4>Recovery Rate Trends</h4>
+									<canvas id="covidRecoveryChart"></canvas>
+								</div>
+								<div class="project-chart-container">
+									<h4>Monthly Progression</h4>
+									<canvas id="covidMonthlyChart"></canvas>
+								</div>
+								<div class="project-chart-container">
+									<h4>Case Distribution</h4>
+									<canvas id="covidDistributionChart"></canvas>
+								</div>
+							</div>
+							
+							<div class="project-report">
+								<h4>📋 Key Insights & Analysis Report</h4>
+								<div class="insights-grid">
+									<div class="insight-card">
+										<div class="insight-icon">🏥</div>
+										<div class="insight-content">
+											<h5>Recovery Analysis</h5>
+											<p>UAE showed the highest recovery rate at 78.5%, followed by Kuwait at 72.3%. Overall GCC recovery rate reached 70.1% by June 2020.</p>
+										</div>
+									</div>
+									<div class="insight-card">
+										<div class="insight-icon">📈</div>
+										<div class="insight-content">
+											<h5>Peak Analysis</h5>
+											<p>Cases peaked in May 2020 across all GCC countries. Saudi Arabia recorded the highest absolute numbers due to population size.</p>
+										</div>
+									</div>
+									<div class="insight-card">
+										<div class="insight-icon">🌍</div>
+										<div class="insight-content">
+											<h5>Regional Patterns</h5>
+											<p>Smaller GCC nations (Qatar, Bahrain) showed faster response times and better containment relative to population density.</p>
+										</div>
+									</div>
+									<div class="insight-card">
+										<div class="insight-icon">⚡</div>
+										<div class="insight-content">
+											<h5>Response Effectiveness</h5>
+											<p>Countries with early lockdown measures showed 23% better outcomes in mortality rates compared to delayed response regions.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+                        <button class="view-project-btn" onclick="event.stopPropagation(); expandProject(this.parentElement)">VIEW PROJECT</button>
+                    </div>
+					
+                    <div class="project-card" onclick="expandProject(this)">
+                        <div class="project-header">
+                            <h3>Diabetes Patent Analysis</h3>
+                            <span class="project-status completed">Completed</span>
+                        </div>
+                        <p>The purpose of this report is to analyze diabetes patient data and connect it with the visual insights from the Power BI dashboard. The report covers data understanding, quality assessment, key performance indicators (KPIs), detailed factor analysis, and concludes with actionable recommendations for decision-making and predictive modeling.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">DAX</span>
+                            <span class="tech-tag">visualization</span>
+							<span class="tech-tag">Health</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">28.6</span>
+                                <span class="metric-label">Avg. BMI</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">175</span>
+                                <span class="metric-label">Diabetes cases</span>
+                            </div>
+							 <div class="metric">
+                                <span class="metric-value">5.53</span>
+                                <span class="metric-label">Avg. HbA1c</span>
+                            </div>
+                        </div>
+						
+						<div class="project-video-container">
+							<div class="video-overlay">📊 Analysis</div>
+							<video class="project-video" controls autoplay muted loop poster="thumbnail.jpg">
+								<source src="Dia.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-description">
+								<h4>Diabetes Analysis Dashboard</h4>
+								<p>Comprehensive patient data analysis with visual insights and KPI tracking</p>
+							</div>
+						</div>
+						
+						<!-- Diabetes Project Dashboard (hidden by default) -->
+						<div class="project-dashboard" id="diabetes-dashboard" style="display: none;">
+							<div class="dashboard-header">
+								<h3>🏥 Diabetes Patient Analysis Dashboard</h3>
+								<p>Advanced analytics on diabetes patient data with predictive insights and health metrics</p>
+							</div>
+							
+							<div class="project-charts-grid">
+								<div class="project-chart-container">
+									<h4>Age Distribution</h4>
+									<canvas id="diabetesAgeChart"></canvas>
+								</div>
+								<div class="project-chart-container">
+									<h4>BMI vs Glucose Levels</h4>
+									<canvas id="diabetesBMIChart"></canvas>
+								</div>
+								<div class="project-chart-container">
+									<h4>Risk Factor Analysis</h4>
+									<canvas id="diabetesRiskChart"></canvas>
+								</div>
+								<div class="project-chart-container">
+									<h4>Gender Distribution</h4>
+									<canvas id="diabetesGenderChart"></canvas>
+								</div>
+							</div>
+							
+							<div class="project-report">
+								<h4>📋 Clinical Insights & Recommendations</h4>
+								<div class="insights-grid">
+									<div class="insight-card">
+										<div class="insight-icon">📊</div>
+										<div class="insight-content">
+											<h5>BMI Correlation</h5>
+											<p>Patients with BMI > 30 showed 3.2x higher diabetes prevalence. Average BMI of diabetic patients: 28.6 kg/m².</p>
+										</div>
+									</div>
+									<div class="insight-card">
+										<div class="insight-icon">👥</div>
+										<div class="insight-content">
+											<h5>Demographics</h5>
+											<p>Peak diabetes occurrence in 45-65 age group (68% of cases). Gender distribution shows slight male predominance (52%).</p>
+										</div>
+									</div>
+									<div class="insight-card">
+										<div class="insight-icon">🎯</div>
+										<div class="insight-content">
+											<h5>Risk Prediction</h5>
+											<p>Model accuracy: 89.2%. Top predictors: glucose levels, BMI, age, and family history account for 78% of variance.</p>
+										</div>
+									</div>
+									<div class="insight-card">
+										<div class="insight-icon">💡</div>
+										<div class="insight-content">
+											<h5>Prevention Insights</h5>
+											<p>Early intervention in pre-diabetic patients (glucose 100-125) can reduce progression risk by 58% through lifestyle modifications.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+                        <button class="view-project-btn" onclick="event.stopPropagation(); expandProject(this.parentElement)">VIEW PROJECT</button>
+                    </div>
+                    <div class="project-card" onclick="expandProject(this)">
+                        <div class="project-header">
+                            <h3>Shopping Trend Dashboard</h3>
+                            <span class="project-status active">Active</span>
+                        </div>
+                        <p>This dashboard provides insights into shopping trends, showing total revenue of 16M with most sales coming from successful transactions, higher performance in 
+						2019 compared to 2018, and key contributions from Egypt, Saudi Arabia, and Iraq, with MasterCard and Hawala as the main payment methods.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Excel</span>
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Pivot Tables</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">16M</span>
+                                <span class="metric-label">Total Revenue</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">MasterCard / Hawala</span>
+                                <span class="metric-label">Payment Methods</span>
+                            </div>
+                        </div>
+						
+						<div class="project-video-container">
+							<div class="video-overlay">🛒 Analytics</div>
+							<video class="project-video" controls autoplay muted loop poster="thumbnail.jpg">
+								<source src="shop.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<div class="video-description">
+								<h4>Excel Analytics Suite Demo</h4>
+								<p>Advanced Excel dashboards with VBA automation and real-time business intelligence</p>
+							</div>
+						</div>
+						
+						<!-- Excel Analytics Project Dashboard (hidden by default) -->
+						<div class="project-dashboard" id="excel-dashboard" style="display: none;">
+							<div class="dashboard-header">
+								<h3>💼 Excel Analytics Suite Dashboard</h3>
+								<p>Comprehensive business intelligence solution with automated reporting and advanced analytics</p>
+							</div>
+							
+							<div class="project-charts-grid">
+								<div class="project-chart-container">
+									<h4>Revenue Performance</h4>
+									<canvas id="excelRevenueChart"></canvas>
+								</div>
+								<div class="project-chart-container">
+									<h4>Product Categories</h4>
+									<canvas id="excelCategoryChart"></canvas>
+								</div>
+								<div class="project-chart-container">
+									<h4>Customer Segments</h4>
+									<canvas id="excelCustomerChart"></canvas>
+								</div>
+								<div class="project-chart-container">
+									<h4>Performance Metrics</h4>
+									<canvas id="excelMetricsChart"></canvas>
+								</div>
+							</div>
+							
+							<div class="project-report">
+								<h4>📋 Business Intelligence Insights</h4>
+								<div class="insights-grid">
+									<div class="insight-card">
+										<div class="insight-icon">📈</div>
+										<div class="insight-content">
+											<h5>Revenue Growth</h5>
+											<p>Automated tracking shows 23% YoY revenue increase. Q4 performance exceeded targets by 15% across all product lines.</p>
+										</div>
+									</div>
+									<div class="insight-card">
+										<div class="insight-icon">⚡</div>
+										<div class="insight-content">
+											<h5>Automation Impact</h5>
+											<p>VBA automation reduced manual reporting time by 78%. Real-time updates improved decision-making speed by 45%.</p>
+										</div>
+									</div>
+									<div class="insight-card">
+										<div class="insight-icon">🎯</div>
+										<div class="insight-content">
+											<h5>Customer Analysis</h5>
+											<p>Top 20% customers generate 67% of revenue. Customer lifetime value increased by 32% through targeted analytics.</p>
+										</div>
+									</div>
+									<div class="insight-card">
+										<div class="insight-icon">🔄</div>
+										<div class="insight-content">
+											<h5>Process Optimization</h5>
+											<p>Pivot table automation and dynamic dashboards enabled 50+ real-time reports, improving operational efficiency by 40%.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+                        <button class="view-project-btn" onclick="event.stopPropagation(); expandProject(this.parentElement)">VIEW PROJECT</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="content-section">
+                <h2>Technical Expertise</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Data Analysis Tools</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="95"></div>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Power BI</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="90"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Excel</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="95"></div>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Core Competencies</h3>
+                        <div class="competency-grid">
+                            <div class="competency-item">Problem Solving</div>
+                            <div class="competency-item">Data Visualization</div>
+                            <div class="competency-item">Statistical Analysis</div>
+                            <div class="competency-item">Process Automation</div>
+                            <div class="competency-item">Business Intelligence</div>
+                            <div class="competency-item">Trend Analysis</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CV/Resume Section -->
+            <section id="cv" class="content-section">
+                <h2>CV/Resume</h2>
+                
+                <div class="cv-container">
+                    <div class="cv-header">
+                        <h3>📄 Professional Resume</h3>
+                        <p>Download or view my complete professional resume with detailed experience, education, and achievements.</p>
+                        
+                        <div class="cv-actions">
+                            <a href="cv.pdf" download="Asmaa_Hussein_CV.pdf" class="cv-btn download-btn">
+                                <span class="btn-icon">⬇️</span>
+                                Download PDF
+                            </a>
+                            <button onclick="toggleCVPreview()" class="cv-btn preview-btn">
+                                <span class="btn-icon">👁️</span>
+                                <span id="previewBtnText">View Preview</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-preview" id="cvPreview" style="display: none;">
+                        <div class="cv-embed-container">
+                            <iframe src="cv.pdf" type="application/pdf" width="100%" height="600px">
+                                <p>Your browser doesn't support PDF viewing. <a href="cv.pdf" download="Asmaa_Hussein_CV.pdf">Download the CV instead</a>.</p>
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-summary">
+                        <div class="summary-grid">
+                            <div class="summary-item">
+                                <span class="summary-icon">🎓</span>
+                                <div>
+                                    <h4>Education</h4>
+                                    <p>Computer Engineering<br>Ahram Canadian University</p>
+                                </div>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-icon">💼</span>
+                                <div>
+                                    <h4>Experience</h4>
+                                    <p>Remotly Data Analysis <br> chase Bliss Audio</p>
+                                </div>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-icon">🏆</span>
+                                <div>
+                                    <h4>Certifications</h4>
+                                    <p>Microsoft Data Analysis<br>Certificate 2024</p>
+                                </div>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-icon">🛠️</span>
+                                <div>
+                                    <h4>Core Skills</h4>
+                                    <p>SQL, Power BI, Python<br>Excel, DAX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-contact">
+                        <h4>✨ Get in Touch</h4>
+                        <p>Interested in my background? Feel free to reach out!</p>
+                        <div class="contact-details">
+                            <span class="contact-item">📧 asmaahussain172001@gmail.com</span>
+                            <span class="contact-item">📱 0565610725</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Outside of data, I'm a big fan of <span class="highlight">coffee ☕</span>, <span class="highlight">swimming 🏊</span>, and getting things done <span class="highlight">efficiently ✨</span>.</p>
+        </footer>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
